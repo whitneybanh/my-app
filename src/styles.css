@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'ABC Diatype';
+  src: local('ABC_Diatype'), url(./fonts/ABC_Diatype/ABCDiatype-Regular-Trial.otf), url(./fonts/ABC_Diatype/ABCDiatype-Bold-Trial.otf) format('truetype');
+}
+@font-face {
+  font-family: 'mg03_bmp7';
+  src: local('mg03_bmp7'), url(./fonts/mg03_bmp7/mg03_bmp7.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'mg01_bmp8';
+  src: local('mg01_bmp8'), url(./fonts/mg01_bmp8/mg01_bmp8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DIN_Alternate_Bold';
+  src: local('DIN_Alternate_Bold'), url(./fonts/DIN_Alternate_Bold.ttf) format('truetype');
+}
+
+
+
+body {
+  font-family: 'DIN_Alternate_Bold';
+  position: relative;
+}
+
+.navbar {
+  padding-top: 40px;
+}
+
+.navbar-text {
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar-text:hover {
+  color: #694BFA;
+  transition: 0.2s;
+}
+
+.title {
+  position: absolute;
+  top: 42%;
+  z-index: 1;
+}
+
+.title h1 {
+  font-family: 'ABC Diatype';
+  font-size: 65px;
+}
+
+.title h1:nth-child(2) {
+  padding-left: 100px;
+}
+
+.btn {
+  color: #333;
+}
+
+.btn:hover {
+  color: #694BFA;
+  transition: 0.2s;
+}
+
+.highstreet-logo {
+  background: url(./assets/hsBackdrop.png) no-repeat 50% 10%;
+  background-size: contain;
+  width: 1200px;
+  height: 500px;
+  position: absolute;
+  right: 0;
+  top: 15%;
+  z-index: 1;
+}
+
+.playground {  
+  animation-name: playground;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes playground {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }    
+}
+
+footer {
+  font-size: 22px;
+}
+
+@media (max-width: 768px) {
+  .highstreet-logo {
+    background: url(./assets/hsBackdrop.png) no-repeat 50% 20%;
+    background-size: contain;
+    max-width: 500px;
+    position: none;
+  }
+}
