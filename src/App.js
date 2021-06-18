@@ -9,8 +9,8 @@ function App() {
   const [state, setState] = useState('WALLET') // original state, initallize the state.
 
   const handleClick = () => {
-    console.log('You clicked here') // test does the btn is works?
-    setState(':D') // change the state 
+    console.log('Thanks for checking the console!') // this text will show up in console.log 
+    setState('Check the console.log!') // change the state 
   }
 
   return (
@@ -18,16 +18,14 @@ function App() {
 
     <div className="container">
 
-      <nav class="navbar navbar-light">
-
-        <a class="navbar-brand" href="{React}">
+      <nav className="navbar navbar-light">
+        <a className="navbar-brand" href="/home">
           <img src={logo} className="App-logo" width="40" alt="logo"/>
         </a>
 
-        <button class="btn" onClick={handleClick}>{state}</button> 
-        {/* onClick: call the function named "handleClick" */}
+        <button className="btn" onClick={handleClick}>{state}</button> 
+        {/* onClick: call the function name, "handleClick" */}
         {/* {state}: the state we declared, when we set the setState, it will change the orginal state.  */}
-
       </nav>
 
       <div className="body-wrap">
@@ -36,11 +34,11 @@ function App() {
           <h1>My Friend</h1>
         </div>
       <div className="highstreet-logo"></div>
-        <div class="row">
-          <div class="col-md-4 col-sm-12 align-self-start">
+        <div className="row">
+          <div className="col-md-4 col-sm-12 align-self-start">
           </div>
-          <div class="col-md-8 col-sm-12 align-self-end">
-            <div class="playground-wrap">
+          <div className="col-md-8 col-sm-12 align-self-end">
+            <div className="playground-wrap">
               <img src={playground} className="box playground img-fluid" width="" alt="playground"/>
             </div>
           </div>
@@ -48,11 +46,11 @@ function App() {
         
       </div>
 
-      <footer class="navbar navbar-light">
-        <a class="navbar-text" href="{React}">
+      <footer className="navbar navbar-light">
+        <a className="navbar-text" href="/home">
           StreetSmart
         </a>
-        <a class="navbar-text" href="{React}">
+        <a className="navbar-text" href="/home">
           ENTERMARKET
         </a>
       </footer>
